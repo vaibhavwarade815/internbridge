@@ -1,0 +1,8 @@
+.internship-card {
+  border: 1px solid #e0e0e0;
+  padding: 12px;
+  border-radius: 6px;
+  background: #fff;
+}
+.internship-card .title { margin: 0 0 6px 0 }
+.internship-card .company { margin: 0 0 8px 0; color:#666 }

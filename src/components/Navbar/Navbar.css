@@ -1,0 +1,8 @@
+.navbar {
+  background: #0b72b9;
+  color: white;
+  padding: 12px 16px;
+}
+.navbar .container {
+  font-weight: 600;
+}
