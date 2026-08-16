@@ -1,1 +1,149 @@
-.page-internship-details { padding: 16px }
+.details-page {
+  max-width: 1100px;
+  width: 92%;
+  margin: auto;
+  padding: 65px 0;
+}
+
+.details-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.details-logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 14px;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.details-header span {
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.details-header h1 {
+  font-size: 35px;
+  margin: 5px 0;
+}
+
+.details-header p {
+  color: #64748b;
+}
+
+.details-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 50px;
+  padding-top: 45px;
+}
+
+.details-main section {
+  margin-bottom: 40px;
+}
+
+.details-main h2 {
+  margin-bottom: 15px;
+}
+
+.details-main p,
+.details-main li {
+  color: #64748b;
+  line-height: 1.8;
+}
+
+.details-main p + p {
+  margin-top: 12px;
+}
+
+.details-main ul {
+  padding-left: 20px;
+}
+
+.detail-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.detail-skills span {
+  padding: 8px 13px;
+  background: #eff6ff;
+  color: #2563eb;
+  border-radius: 6px;
+}
+
+.job-summary {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 25px;
+  position: sticky;
+  top: 100px;
+}
+
+.job-summary h3 {
+  margin-bottom: 25px;
+}
+
+.job-summary > div {
+  padding: 15px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.job-summary p {
+  color: #64748b;
+  margin-top: 5px;
+}
+
+.apply-btn,
+.save-btn {
+  width: 100%;
+  padding: 13px;
+  border-radius: 7px;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.apply-btn {
+  border: none;
+  background: #2563eb;
+  color: white;
+}
+
+.save-btn {
+  background: white;
+  color: #2563eb;
+  border: 1px solid #2563eb;
+}
+
+.not-found {
+  text-align: center;
+  padding: 100px;
+}
+
+.not-found a {
+  display: inline-block;
+  margin-top: 15px;
+  color: #2563eb;
+}
+
+@media (max-width: 800px) {
+  .details-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .job-summary {
+    position: static;
+  }
+}

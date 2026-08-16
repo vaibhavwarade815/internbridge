@@ -1,1 +1,90 @@
-.page-register { padding: 16px }
+.register-page {
+  min-height: 75vh;
+  background: #f8fafc;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 520px;
+  background: white;
+  padding: 38px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.register-header h1 {
+  font-size: 30px;
+}
+
+.register-header p {
+  color: #64748b;
+  margin-top: 8px;
+}
+
+.register-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-card label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.register-card input {
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  margin-bottom: 18px;
+  outline: none;
+}
+
+.register-card input:focus {
+  border-color: #2563eb;
+}
+
+.two-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.two-inputs input {
+  width: 100%;
+}
+
+.register-submit {
+  padding: 13px;
+  background: #2563eb;
+  border: none;
+  color: white;
+  border-radius: 7px;
+  font-weight: 600;
+}
+
+.register-bottom {
+  text-align: center;
+  color: #64748b;
+  margin-top: 22px;
+}
+
+.register-bottom a {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+@media (max-width: 500px) {
+  .two-inputs {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

@@ -1,8 +1,90 @@
 .internship-card {
-  border: 1px solid #e0e0e0;
-  padding: 12px;
-  border-radius: 6px;
-  background: #fff;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 24px;
+  transition: 0.3s;
 }
-.internship-card .title { margin: 0 0 6px 0 }
-.internship-card .company { margin: 0 0 8px 0; color:#666 }
+
+.internship-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.company-logo {
+  width: 45px;
+  height: 45px;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.mode-badge {
+  background: #ecfdf5;
+  color: #047857;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.internship-card h3 {
+  font-size: 19px;
+  margin-bottom: 7px;
+  color: #111827;
+}
+
+.company-name {
+  color: #2563eb;
+  font-weight: 500;
+  margin-bottom: 17px;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 18px 0;
+}
+
+.skills span {
+  background: #f1f5f9;
+  color: #475569;
+  padding: 5px 9px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.details-btn {
+  display: block;
+  text-align: center;
+  padding: 11px;
+  background: #2563eb;
+  color: white;
+  border-radius: 7px;
+  font-weight: 600;
+}
+
+.details-btn:hover {
+  background: #1d4ed8;
+}

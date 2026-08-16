@@ -1,1 +1,67 @@
-.page-myapplications { padding: 16px }
+.applications-page {
+  max-width: 1000px;
+  width: 92%;
+  margin: auto;
+  padding: 70px 0;
+}
+
+.simple-header {
+  margin-bottom: 35px;
+}
+
+.simple-header span {
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.simple-header h1 {
+  font-size: 38px;
+  margin: 10px 0;
+}
+
+.simple-header p {
+  color: #64748b;
+}
+
+.applications-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+
+.application-item {
+  padding: 22px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.application-item:last-child {
+  border-bottom: none;
+}
+
+.application-item p {
+  color: #64748b;
+  margin-top: 5px;
+}
+
+.application-status {
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.shortlisted {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.under-review {
+  background: #fff7ed;
+  color: #c2410c;
+}

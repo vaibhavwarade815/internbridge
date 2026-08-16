@@ -1,1 +1,18 @@
-.page-saved-internships { padding: 16px }
+.saved-page {
+  max-width: 1000px;
+  width: 92%;
+  margin: auto;
+  padding: 70px 0;
+}
+
+.saved-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+@media (max-width: 650px) {
+  .saved-grid {
+    grid-template-columns: 1fr;
+  }
+}

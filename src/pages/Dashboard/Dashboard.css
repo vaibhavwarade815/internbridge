@@ -1,1 +1,175 @@
-.page-dashboard { padding: 16px }
+.dashboard-page {
+  background: #f8fafc;
+  min-height: 75vh;
+  padding: 55px 0;
+}
+
+.dashboard-container {
+  max-width: 1200px;
+  width: 92%;
+  margin: auto;
+}
+
+.dashboard-welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.dashboard-welcome span {
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.dashboard-welcome h1 {
+  font-size: 30px;
+  margin: 8px 0;
+}
+
+.dashboard-welcome p {
+  color: #64748b;
+}
+
+.dashboard-apply {
+  background: #2563eb;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 7px;
+  font-weight: 600;
+}
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.dashboard-stats > div {
+  background: white;
+  border: 1px solid #e5e7eb;
+  padding: 22px;
+  border-radius: 10px;
+}
+
+.dashboard-stats span {
+  font-size: 22px;
+}
+
+.dashboard-stats h2 {
+  margin-top: 12px;
+}
+
+.dashboard-stats p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr;
+  gap: 22px;
+  margin-top: 25px;
+}
+
+.recent-applications,
+.profile-progress {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.dashboard-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.dashboard-title a,
+.profile-progress a {
+  color: #2563eb;
+}
+
+.application-row {
+  padding: 18px 0;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.application-row p {
+  color: #64748b;
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+.status {
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.shortlisted {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.review {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+.applied {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.profile-progress {
+  text-align: center;
+}
+
+.progress-circle {
+  width: 130px;
+  height: 130px;
+  border: 12px solid #2563eb;
+  border-radius: 50%;
+  margin: 25px auto 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.profile-progress p {
+  color: #64748b;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 800px) {
+  .dashboard-stats,
+  .dashboard-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+  .dashboard-welcome {
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+  }
+
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+}
