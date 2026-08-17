@@ -1,84 +1,357 @@
+/* =========================================
+   INTERNBRIDGE NAVBAR
+   Deep Indigo + Violet Theme
+========================================= */
+
 .navbar {
   width: 100%;
-  background: #ffffff;
-  border-bottom: 1px solid #e5e7eb;
   position: sticky;
   top: 0;
   z-index: 1000;
+
+  background: #312e81;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+  box-shadow: 0 4px 18px rgba(49, 46, 129, 0.18);
 }
 
+/* =========================================
+   NAV CONTAINER
+========================================= */
+
 .nav-container {
-  max-width: 1200px;
   width: 92%;
+  max-width: 1200px;
+
   height: 72px;
+
   margin: auto;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+/* =========================================
+   LOGO
+========================================= */
+
 .logo {
+  color: #ffffff;
+
   font-size: 25px;
   font-weight: 800;
-  color: #111827;
+
+  letter-spacing: -0.7px;
+
+  text-decoration: none;
+
+  transition: 0.3s;
 }
 
 .logo span {
-  color: #2563eb;
+  color: #c4b5fd;
 }
+
+.logo:hover {
+  color: #ddd6fe;
+}
+
+/* =========================================
+   NAVIGATION LINKS
+========================================= */
 
 .nav-links {
   display: flex;
-  list-style: none;
+  align-items: center;
+
   gap: 28px;
+
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
-  color: #4b5563;
-  font-size: 15px;
-  font-weight: 500;
+  position: relative;
+
+  color: #e0e7ff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  padding: 8px 0;
+
   transition: 0.3s;
 }
 
 .nav-links a:hover {
-  color: #2563eb;
+  color: #ffffff;
 }
+
+/* Hover underline */
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+
+  border-radius: 10px;
+
+  background: #a78bfa;
+
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* =========================================
+   NAV ACTIONS
+========================================= */
 
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 18px;
+
+  gap: 10px;
 }
 
-.login-link {
-  color: #374151;
-  font-weight: 500;
+/* =========================================
+   LOGIN
+========================================= */
+
+.login-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 9px 16px;
+
+  color: #ffffff;
+
+  background: transparent;
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: 0.3s;
 }
+
+.login-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+
+  border-color: #ffffff;
+
+  transform: translateY(-2px);
+
+}
+
+.login-link{
+  color: #e0e7ff;
+}
+
+/* =========================================
+   REGISTER / GET STARTED
+========================================= */
 
 .register-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
   padding: 10px 18px;
-  background: #2563eb;
-  color: white;
-  border-radius: 7px;
-  font-weight: 600;
+
+  color: #312e81;
+
+  background: #ffffff;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 6px 18px rgba(15, 23, 42, 0.15);
+
+  transition: 0.3s;
 }
 
 .register-btn:hover {
-  background: #1d4ed8;
+  background: #ede9fe;
+
+  color: #4c1d95;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 9px 22px rgba(15, 23, 42, 0.2);
 }
 
-@media (max-width: 850px) {
+/* =========================================
+   MOBILE MENU BUTTON
+========================================= */
+
+.menu-btn {
+  display: none;
+
+  width: 40px;
+  height: 40px;
+
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  border-radius: 8px;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.menu-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .nav-container {
+    width: 90%;
+  }
+
   .nav-links {
-    display: none;
+    gap: 18px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .nav-actions {
+    gap: 7px;
   }
 }
 
-@media (max-width: 500px) {
-  .login-link {
-    display: none;
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .nav-container {
+    height: 68px;
   }
 
   .logo {
     font-size: 22px;
+  }
+
+  .nav-links {
+    display: none;
+
+    position: absolute;
+
+    top: 68px;
+    left: 0;
+
+    width: 100%;
+
+    padding: 18px;
+
+    background: #312e81;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    box-shadow:
+      0 15px 30px rgba(15, 23, 42, 0.2);
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 4px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+
+    width: 100%;
+
+    padding: 12px;
+
+    border-radius: 7px;
+  }
+
+  .nav-links a:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-links a::after {
+    display: none;
+  }
+
+  .nav-actions {
+    display: none;
+  }
+
+  .menu-btn {
+    display: flex;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .nav-container {
+    width: 88%;
+  }
+
+  .logo {
+    font-size: 21px;
   }
 }

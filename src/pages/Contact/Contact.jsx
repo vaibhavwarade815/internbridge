@@ -23,17 +23,17 @@ function Contact() {
           </p>
 
           <div>
-            <strong>📧 Email</strong>
+            <strong>Email</strong>
             <p>support@internbridge.com</p>
           </div>
 
           <div>
-            <strong>📍 Location</strong>
+            <strong> Location</strong>
             <p>India</p>
           </div>
 
           <div>
-            <strong>⏰ Support</strong>
+            <strong>Support</strong>
             <p>Monday - Friday</p>
           </div>
         </div>

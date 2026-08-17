@@ -1,130 +1,757 @@
-import { Link } from "react-router-dom";
-import internships from "../../data/internships";
-import InternshipCard from "../../components/InternshipCard/InternshipCard";
-import "./Home.css";
+/* =========================================
+   INTERNBRIDGE HOME PAGE
+   Modern Career Platform Theme
+========================================= */
 
-function Home() {
-  return (
-    <>
-      <section className="hero">
-        <div className="hero-container">
-          <div className="hero-content">
-            <span className="hero-tag">SMART INTERNSHIP PLATFORM</span>
-
-            <h1>
-              Build Your Career
-              <span> With The Right Internship</span>
-            </h1>
-
-            <p>
-              Discover meaningful internship opportunities, develop your
-              skills, track applications and take the next step toward your
-              dream career with InternBridge.
-            </p>
-
-            <div className="hero-buttons">
-              <Link to="/internships" className="primary-btn">
-                Explore Internships →
-              </Link>
-
-              <Link to="/register" className="secondary-btn">
-                Create Account
-              </Link>
-            </div>
-          </div>
-
-          <div className="hero-card">
-            <div className="floating-card">
-              <span>🎯</span>
-              <div>
-                <strong>Career Growth</strong>
-                <p>Start your journey today</p>
-              </div>
-            </div>
-
-            <div className="hero-dashboard">
-              <div className="dashboard-circle">85%</div>
-              <h3>Profile Strength</h3>
-              <p>You're almost ready to apply!</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="stats-section">
-        <div className="stats-container">
-          <div>
-            <h2>500+</h2>
-            <p>Internships</p>
-          </div>
-          <div>
-            <h2>200+</h2>
-            <p>Companies</p>
-          </div>
-          <div>
-            <h2>1K+</h2>
-            <p>Students</p>
-          </div>
-          <div>
-            <h2>300+</h2>
-            <p>Placements</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="featured-section">
-        <div className="section-heading">
-          <div>
-            <span>EXPLORE OPPORTUNITIES</span>
-            <h2>Featured Internships</h2>
-          </div>
-
-          <Link to="/internships">View All →</Link>
-        </div>
-
-        <div className="internship-grid">
-          {internships.slice(0, 3).map((internship) => (
-            <InternshipCard
-              key={internship.id}
-              internship={internship}
-            />
-          ))}
-        </div>
-      </section>
-
-      <section className="why-section">
-        <div className="why-content">
-          <span>WHY INTERNBRIDGE?</span>
-          <h2>Everything You Need to Start Your Career</h2>
-          <p>
-            InternBridge brings internship discovery, application tracking,
-            profile management and career preparation into one simple
-            platform.
-          </p>
-        </div>
-
-        <div className="feature-grid">
-          <div className="feature-box">
-            <div>🔎</div>
-            <h3>Find Opportunities</h3>
-            <p>Discover internships based on your skills and interests.</p>
-          </div>
-
-          <div className="feature-box">
-            <div>📊</div>
-            <h3>Track Applications</h3>
-            <p>Manage and monitor all your applications in one place.</p>
-          </div>
-
-          <div className="feature-box">
-            <div>🎯</div>
-            <h3>Prepare for Career</h3>
-            <p>Improve your interview skills and prepare with confidence.</p>
-          </div>
-        </div>
-      </section>
-    </>
-  );
+* {
+  box-sizing: border-box;
 }
 
-export default Home;
+.hero {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 600px;
+
+  background:
+    radial-gradient(
+      circle at 90% 15%,
+      rgba(109, 40, 217, 0.16),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 5% 90%,
+      rgba(15, 118, 110, 0.10),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #f5f3ff 0%,
+      #eef2ff 50%,
+      #f0fdfa 100%
+    );
+}
+
+/* =========================================
+   HERO CONTAINER
+========================================= */
+
+.hero-container {
+  width: 92%;
+  max-width: 1200px;
+
+  min-height: 600px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 1.05fr 0.95fr;
+
+  align-items: center;
+
+  gap: 70px;
+}
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero-content {
+  max-width: 650px;
+}
+
+.hero-tag,
+.section-heading span,
+.why-content > span {
+  display: inline-block;
+
+  color: #3730a3;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  margin-bottom: 8px;
+}
+
+.hero h1 {
+  color: #172033;
+
+  font-size: 54px;
+
+  line-height: 1.1;
+
+  letter-spacing: -1.8px;
+
+  margin: 15px 0 20px;
+}
+
+.hero h1 span {
+  display: block;
+
+  color: #6d28d9;
+}
+
+.hero-content > p {
+  max-width: 610px;
+
+  color: #64748b;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+}
+
+/* =========================================
+   HERO BUTTONS
+========================================= */
+
+.hero-buttons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: 32px;
+}
+
+.primary-btn,
+.secondary-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 48px;
+
+  padding: 0 22px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  color: #ffffff;
+
+  background: #3730a3;
+
+  box-shadow:
+    0 10px 22px rgba(55, 48, 163, 0.22);
+}
+
+.primary-btn:hover {
+  background: #312e81;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 14px 28px rgba(55, 48, 163, 0.28);
+}
+
+.secondary-btn {
+  color: #3730a3;
+
+  background: #ffffff;
+
+  border: 1px solid #c7d2fe;
+}
+
+.secondary-btn:hover {
+  color: #6d28d9;
+
+  border-color: #a78bfa;
+
+  transform: translateY(-3px);
+}
+
+/* =========================================
+   HERO DASHBOARD AREA
+========================================= */
+
+.hero-card {
+  position: relative;
+
+  min-height: 390px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+/* Main dashboard */
+
+.hero-dashboard {
+  width: 310px;
+
+  min-height: 330px;
+
+  padding: 35px 25px;
+
+  background: #ffffff;
+
+  border: 1px solid #e0e7ff;
+
+  border-radius: 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  position: relative;
+
+  z-index: 2;
+
+  box-shadow:
+    0 25px 55px rgba(55, 48, 163, 0.14);
+}
+
+/* Profile circle */
+
+.dashboard-circle {
+  width: 135px;
+
+  height: 135px;
+
+  border-radius: 50%;
+
+  border: 11px solid #3730a3;
+
+  border-right-color: #6d28d9;
+
+  border-bottom-color: #0f766e;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #3730a3;
+
+  font-size: 29px;
+
+  font-weight: 800;
+
+  margin-bottom: 20px;
+
+  background: #fafaff;
+}
+
+.hero-dashboard h3 {
+  color: #172033;
+
+  font-size: 18px;
+
+  margin-bottom: 6px;
+}
+
+.hero-dashboard p {
+  color: #64748b;
+
+  font-size: 13px;
+
+  text-align: center;
+}
+
+/* =========================================
+   FLOATING CARD
+========================================= */
+
+.floating-card {
+  position: absolute;
+
+  top: 28px;
+
+  right: 0;
+
+  min-width: 220px;
+
+  padding: 15px 17px;
+
+  background: #111827;
+
+  border-radius: 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  z-index: 3;
+
+  box-shadow:
+    0 15px 35px rgba(15, 23, 42, 0.18);
+}
+
+.floating-card span {
+  width: 42px;
+
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #312e81;
+
+  border-radius: 9px;
+
+  font-size: 21px;
+}
+
+.floating-card strong {
+  display: block;
+
+  color: #ffffff;
+
+  font-size: 13px;
+}
+
+.floating-card p {
+  color: #cbd5e1;
+
+  font-size: 11px;
+
+  margin-top: 4px;
+}
+
+/* =========================================
+   STATS
+========================================= */
+
+.stats-section {
+  background: #111827;
+
+  border-top: 1px solid #1f2937;
+
+  border-bottom: 1px solid #1f2937;
+}
+
+.stats-container {
+  width: 90%;
+
+  max-width: 1050px;
+
+  margin: auto;
+
+  padding: 32px 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  text-align: center;
+}
+
+.stats-container > div {
+  position: relative;
+}
+
+.stats-container > div:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+
+  top: 15%;
+
+  width: 1px;
+
+  height: 70%;
+
+  background: #374151;
+}
+
+.stats-container h2 {
+  color: #a78bfa;
+
+  font-size: 29px;
+
+  font-weight: 800;
+}
+
+.stats-container p {
+  color: #cbd5e1;
+
+  font-size: 13px;
+
+  margin-top: 4px;
+}
+
+/* =========================================
+   FEATURED INTERNSHIPS
+========================================= */
+
+.featured-section {
+  width: 92%;
+
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 90px 0;
+}
+
+.section-heading {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  margin-bottom: 35px;
+}
+
+.section-heading h2 {
+  color: #172033;
+
+  font-size: 32px;
+
+  line-height: 1.2;
+
+  margin-top: 6px;
+}
+
+.section-heading a {
+  color: #3730a3;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  transition: 0.3s;
+}
+
+.section-heading a:hover {
+  color: #6d28d9;
+
+  transform: translateX(3px);
+}
+
+/* Cards grid */
+
+.internship-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 24px;
+}
+
+/*
+  Actual internship card styling
+  stays inside InternshipCard.css
+*/
+
+/* =========================================
+   WHY INTERNBRIDGE
+========================================= */
+
+.why-section {
+  width: 100%;
+
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 90px 4%;
+
+  display: grid;
+
+  grid-template-columns: 0.8fr 1.2fr;
+
+  align-items: center;
+
+  gap: 70px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f5f3ff,
+      #eef2ff
+    );
+}
+
+.why-content h2 {
+  color: #172033;
+
+  font-size: 36px;
+
+  line-height: 1.2;
+
+  margin: 14px 0 16px;
+}
+
+.why-content p {
+  color: #64748b;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+/* =========================================
+   FEATURE BOXES
+========================================= */
+
+.feature-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+.feature-box {
+  padding: 25px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 8px 25px rgba(15, 23, 42, 0.05);
+
+  transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-6px);
+
+  border-color: #c4b5fd;
+
+  box-shadow:
+    0 16px 35px rgba(55, 48, 163, 0.11);
+}
+
+.feature-box > div {
+  width: 48px;
+
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #ede9fe;
+
+  font-size: 23px;
+
+  margin-bottom: 16px;
+}
+
+.feature-box:nth-child(2) > div {
+  background: #e0f2fe;
+}
+
+.feature-box:nth-child(3) > div {
+  background: #ccfbf1;
+}
+
+.feature-box h3 {
+  color: #172033;
+
+  font-size: 16px;
+
+  margin-bottom: 8px;
+}
+
+.feature-box p {
+  color: #64748b;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .hero-container {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+
+    padding: 70px 0;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-content {
+    margin: auto;
+  }
+
+  .hero-content > p {
+    margin: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-card {
+    margin-top: 10px;
+  }
+
+  .internship-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .why-section {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .hero-container {
+    width: 88%;
+
+    padding: 55px 0;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+
+    letter-spacing: -1px;
+  }
+
+  .hero-content > p {
+    font-size: 15px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+  }
+
+  .hero-card {
+    min-height: 330px;
+  }
+
+  .hero-dashboard {
+    width: 270px;
+
+    min-height: 290px;
+  }
+
+  .floating-card {
+    top: 5px;
+
+    right: -5px;
+
+    transform: scale(0.9);
+  }
+
+  .stats-container {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+  }
+
+  .stats-container > div:not(:last-child)::after {
+    display: none;
+  }
+
+  .featured-section {
+    width: 88%;
+
+    padding: 65px 0;
+  }
+
+  .section-heading {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 14px;
+  }
+
+  .section-heading h2 {
+    font-size: 28px;
+  }
+
+  .internship-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-section {
+    padding: 65px 7%;
+  }
+
+  .why-content h2 {
+    font-size: 30px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero-dashboard {
+    width: 245px;
+  }
+
+  .floating-card {
+    right: -15px;
+
+    transform: scale(0.82);
+  }
+}

@@ -18,6 +18,9 @@ function Navbar() {
               <Link to="/internships">Internships</Link>
             </li>
             <li>
+              <Link to="/dashboard">Dashboard</Link>
+            </li>
+            <li>
               <Link to="/career">Career</Link>
             </li>
             <li>
