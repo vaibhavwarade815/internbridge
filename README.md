@@ -26,6 +26,7 @@ https://github.com/vaibhavwarade815/internbridge.git
 ### 🌐 Live Demo
 
 Demo:
+https://internbridge-2026.netlify.app/
 
 ## ✨ Features
 
