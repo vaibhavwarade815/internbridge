@@ -1,16 +1,125 @@
-# React + Vite
+# 🚀 InternBridge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Smart Internship & Career Management Platform
 
-Currently, two official plugins are available:
+InternBridge is a modern React-based frontend web application designed to help students discover internship opportunities and manage their career journey through a simple and user-friendly platform.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📌 Project Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Finding the right internship can be challenging for students and freshers.
 
-## Expanding the ESLint configuration
+InternBridge provides a centralized platform where users can explore internships, view internship details, manage their profile, track applications, save opportunities, and prepare for their career.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The frontend is designed with a clean, modern, responsive, and professional user interface.
+
+---
+
+## 🔗 Links
+
+### 📂 GitHub Repository
+
+GitHub:
+https://github.com/vaibhavwarade815/internbridge.git
+
+### 🌐 Live Demo
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-View%20Website-4F46E5?style=for-the-badge&logo=netlify)](YOUR_FRONTEND_URL)
+
+## ✨ Features
+
+- 🏠 Professional Home Page
+- 💼 Internship Listings
+- 📋 Internship Details
+- 🔐 User Login
+- 📝 User Registration
+- 📊 Student Dashboard
+- 📌 Application Tracking
+- ❤️ Saved Internships
+- 👤 User Profile
+- 📄 Resume Section
+- 🎯 Career Preparation
+- 📞 Contact Us
+- 📱 Responsive Design
+- 🧭 Client-side Navigation
+
+---
+
+## 📄 Pages
+
+The frontend contains 12 main pages:
+
+1. 🏠 Home
+2. 💼 Internships
+3. 📋 Internship Details
+4. 🔐 Login
+5. 📝 Register
+6. 📊 Dashboard
+7. 📌 My Applications
+8. ❤️ Saved Internships
+9. 👤 My Profile
+10. 📄 Resume
+11. 🎯 Career Preparation
+12. 📞 Contact Us
+
+---
+
+## 🛠️ Technologies Used
+
+### Frontend
+
+- React.js
+- JavaScript
+- HTML5
+- CSS3
+- React Router DOM
+
+### Development Tools
+
+- VS Code
+- Git
+- GitHub
+- npm
+
+---
+
+## 📁 Project Structure
+
+```text
+InternBridge/
+│
+├── public/
+│
+├── src/
+│   │
+│   ├── components/
+│   │   ├── Navbar/
+│   │   ├── Footer/
+│   │   └── InternshipCard/
+│   │
+│   ├── data/
+│   │   └── internships.js
+│   │
+│   ├── views/
+│   │   ├── Home/
+│   │   ├── Internships/
+│   │   ├── InternshipDetails/
+│   │   ├── Login/
+│   │   ├── Register/
+│   │   ├── Dashboard/
+│   │   ├── MyApplications/
+│   │   ├── SavedInternships/
+│   │   ├── Profile/
+│   │   ├── Resume/
+│   │   ├── CareerPreparation/
+│   │   └── Contact/
+│   │
+│   ├── App.jsx
+│   ├── App.css
+│   └── main.jsx
+│
+├── .gitignore
+├── package.json
+├── package-lock.json
+└── README.md
