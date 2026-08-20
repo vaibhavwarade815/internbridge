@@ -15,6 +15,7 @@ import Profile from "./pages/Profile/Profile";
 import Resume from "./pages/Resume/Resume";
 import CareerPreparation from "./pages/CareerPreparation/CareerPreparation";
 import Contact from "./pages/Contact/Contact";
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 
 function App() {
   return (
@@ -30,11 +31,50 @@ function App() {
         />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/applications" element={<MyApplications />} />
-        <Route path="/saved" element={<SavedInternships />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/resume" element={<Resume />} />
+       <Route
+  path="/dashboard"
+  element={
+    <ProtectedRoute>
+      <Dashboard />
+    </ProtectedRoute>
+  }
+/>
+
+<Route
+  path="/my-applications"
+  element={
+    <ProtectedRoute>
+      <MyApplications />
+    </ProtectedRoute>
+  }
+/>
+
+<Route
+  path="/saved"
+  element={
+    <ProtectedRoute>
+      <SavedInternships />
+    </ProtectedRoute>
+  }
+/>
+
+<Route
+  path="/profile"
+  element={
+    <ProtectedRoute>
+      <Profile />
+    </ProtectedRoute>
+  }
+/>
+
+<Route
+  path="/resume"
+  element={
+    <ProtectedRoute>
+      <Resume />
+    </ProtectedRoute>
+  }
+/>
         <Route path="/career" element={<CareerPreparation />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

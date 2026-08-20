@@ -63,7 +63,7 @@ function Footer() {
           <h3>For Students</h3>
 
           <Link to="/dashboard">Dashboard</Link>
-          <Link to="/applications">My Applications</Link>
+          <Link to="/my-applications">My Applications</Link>
           <Link to="/saved">Saved Internships</Link>
           <Link to="/profile">My Profile</Link>
           <Link to="/resume">Resume</Link>
